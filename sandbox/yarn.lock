@@ -10158,8 +10158,10 @@ stackframe@^1.1.1:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.2.0.tgz#52429492d63c62eb989804c11552e3d22e779303"
   integrity sha512-GrdeshiRmS1YLMYgzF16olf2jJ/IzxXY9lhKOskuVziubpTYcYqyOwYeJKzQkwy7uN0fYSsbsC4RQaXf9LCrYA==
 
-"statechart-viz@file:..":
+statechart-viz@^0.1.0:
   version "0.1.0"
+  resolved "https://registry.yarnpkg.com/statechart-viz/-/statechart-viz-0.1.0.tgz#2a428eb15bb27d0040eeec77f18e0c00964e3423"
+  integrity sha512-W1eMgDwP6H+A98XvVFy7gtkHX+eIu7S5BjRj7ogIwlqILlNyO2NmY2NBd5oJoM+KROXU1d+Dfz9JAmJgOuG+gg==
   dependencies:
     styled-components "^5.2.1"
     xstate "4.6.7"
