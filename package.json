@@ -1,0 +1,64 @@
+{
+  "name": "statechart-viz",
+  "version": "0.1.0",
+  "description": "A React component for statechart visualisation.",
+  "private": false,
+  "author": {
+    "name": "Serhii Palash",
+    "email": "serhii.palash@gmail.com",
+    "url": "https://github.com/serhiipalash"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "statechart",
+    "visualizer",
+    "xstate",
+    "scxml",
+    "visualisation",
+    "viz"
+  ],
+  "homepage": "https://github.com/serhiipalash/statechart-viz#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/serhiipalash/statechart-viz.git"
+  },
+  "bugs": {
+    "url": "http://github.com/serhiipalash/statechart-viz/issues"
+  },
+  "scripts": {
+    "sandbox": "cd sandbox && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "clean": "git clean -fdx"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.13",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "rollup": "^2.43.1",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "styled-components": "^5.2.1",
+    "xstate": "4.6.7"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}
