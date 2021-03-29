@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-
 import { actionTypes } from 'xstate/lib/actions'
 import styled from 'styled-components'
 
@@ -38,19 +37,17 @@ export const StateChartAction = ({ action, ...dataAttrs }) => {
         </StyledStateChartAction>
       ) : (
         <Fragment>
-          {Object.keys(action.assignment).map(key => {
-            return (
-              <StyledStateChartAction
-                key={key}
-                title={`assign ${key}`}
-                {...dataAttrs}
-              >
-                <StyledStateChartActionText>
-                  <strong>assign</strong> {key}
-                </StyledStateChartActionText>
-              </StyledStateChartAction>
-            )
-          })}
+          {Object.keys(action.assignment).map(key => (
+            <StyledStateChartAction
+              key={key}
+              title={`assign ${key}`}
+              {...dataAttrs}
+            >
+              <StyledStateChartActionText>
+                <strong>assign</strong> {key}
+              </StyledStateChartActionText>
+            </StyledStateChartAction>
+          ))}
         </Fragment>
       )
 
@@ -61,7 +58,7 @@ export const StateChartAction = ({ action, ...dataAttrs }) => {
         </StyledStateChartAction>
       )
 
-    case actionTypes.send:
+    case actionTypes.send: {
       const sendAction = action
 
       if (
@@ -84,6 +81,7 @@ export const StateChartAction = ({ action, ...dataAttrs }) => {
           </StyledStateChartActionText>
         </StyledStateChartAction>
       )
+    }
 
     case actionTypes.log:
       return (

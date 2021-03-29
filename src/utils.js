@@ -14,9 +14,7 @@ export function flatten(array) {
 
 export function transitions(stateNode) {
   return flatten(
-    stateNode.ownEvents.map(event => {
-      return stateNode.definition.on[event]
-    })
+    stateNode.ownEvents.map(event => stateNode.definition.on[event])
   )
 }
 
@@ -40,7 +38,7 @@ export function getEventDelay(event) {
   let match = event.match(DELAY_EVENT_REGEX)
 
   if (match) {
-    return Number.isFinite(+match[1]) ? +match[1] : match[1]
+    return Number.isFinite(Number(match[1])) ? Number(match[1]) : match[1]
   }
 
   return false
@@ -48,6 +46,7 @@ export function getEventDelay(event) {
 
 export function serializeEdge(edge) {
   const cond = edge.cond ? `[${edge.cond.toString().replace(/\n/g, '')}]` : ''
+
   return `${edge.source.id}:${edge.event}${cond}->${edge.target.id}`
 }
 
@@ -84,6 +83,7 @@ export function initialStateNodes(stateNode) {
     flatten(
       stateKeys.map(key => {
         const childStateNode = stateNode.states[key]
+
         if (
           childStateNode.type === 'compound' ||
           childStateNode.type === 'parallel'

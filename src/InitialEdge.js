@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { tracker } from './tracker'
 import { relative } from './utils'
 
@@ -8,17 +7,21 @@ export class InitialEdge extends React.Component {
     super(...args)
     InitialEdge.prototype.__init.call(this)
   }
+
   __init() {
     this.state = {
       sourceElement: undefined,
     }
   }
+
   componentDidMount() {
     const { id } = this.props.source
+
     tracker.listen(id, data => {
       this.setState({ sourceElement: data.element })
     })
   }
+
   render() {
     const { svgRef, preview } = this.props
 
@@ -36,6 +39,7 @@ export class InitialEdge extends React.Component {
     return (
       <g>
         <circle r="4" cx={left - 10} cy={top} fill={stroke} />
+
         <path
           d={`M ${left - 10},${top} Q ${left - 10},${top + 10} ${left - 1},${
             top + 10

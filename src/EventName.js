@@ -5,7 +5,7 @@ export const EventName = ({ event }) => {
   let match = event.match(DELAY_EVENT_REGEX)
 
   if (match) {
-    const isMs = Number.isFinite(+match[1])
+    const isMs = Number.isFinite(Number(match[1]))
 
     return (
       <span>

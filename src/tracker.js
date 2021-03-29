@@ -6,6 +6,7 @@ class Tracker {
   }
   constructor() {
     Tracker.prototype.__init.call(this)
+
     if (typeof window !== 'undefined') {
       let timeout
 
@@ -66,6 +67,7 @@ class Tracker {
     }
 
     const data = this.elements.get(id)
+
     data.listeners.add(listener)
 
     this.notify(data)
