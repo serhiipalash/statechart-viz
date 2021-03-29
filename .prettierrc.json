@@ -1,0 +1,20 @@
+{
+  "semi": false,
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ".@(babelrc)",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.sublime-project",
+      "options": { "parser": "json" }
+    }
+  ]
+}

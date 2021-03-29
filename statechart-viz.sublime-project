@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "js_prettier": {
+      "auto_format_on_save_excludes": [
+        "*/node_modules/*",
+        "*/.git/*",
+        "*/build/*"
+      ],
+      "custom_file_extensions": ["sublime-project", "babelrc"],
+      "prettier_options": {
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "parser": "babel",
+        "printWidth": 80,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    }
+  },
+  "syntax_override": {
+    "\\.(babelrc)$": ["Babel", "JSON"]
+  }
+}

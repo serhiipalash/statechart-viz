@@ -1,0 +1,65 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "amd": true
+  },
+  "ignorePatterns": ["node_modules"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "classes": true,
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": ["react", "prettier", "react-hooks"],
+  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "react/jsx-curly-brace-presence": ["warn", { "props": "never" }],
+    "react/jsx-newline": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "arrow-body-style": ["warn", "as-needed"],
+    "react/display-name": "off",
+    "no-return-await": "warn",
+    "no-tabs": "warn",
+    "no-param-reassign": "error",
+    "no-var": "warn",
+    "no-else-return": "warn",
+    "curly": "warn",
+    "no-lonely-if": "warn",
+    "no-duplicate-imports": "warn",
+    "semi": ["warn", "never"],
+    "no-extra-semi": "off",
+    "no-console": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
+    "react/no-string-refs": "off",
+    "react/no-deprecated": "off",
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-key": "warn",
+    "react/jsx-no-bind": "off",
+    "prettier/prettier": "warn",
+    "no-implicit-coercion": "warn",
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "*", "next": "if" },
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  }
+}
