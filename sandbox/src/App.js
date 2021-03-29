@@ -1,7 +1,7 @@
-import StatechartViz from 'statechart-viz'
+import StatechartViz from '~/src'
 import { useEffect, useState } from 'react'
-import toggleMachineStatchart from './statecharts/toggle'
-import fetchMachineStatechart from './statecharts/fetch'
+import toggleMachineStatchart from '~/assets/statecharts/toggle'
+import fetchMachineStatechart from '~/assets/statecharts/fetch'
 
 export default function App() {
   const [value, setValue] = useState(toggleMachineStatchart)

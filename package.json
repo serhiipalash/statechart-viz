@@ -36,10 +36,11 @@
     "url": "http://github.com/serhiipalash/statechart-viz/issues"
   },
   "scripts": {
-    "sandbox": "cd sandbox && npm start",
+    "dev": "cd sandbox && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "clean": "git clean -fdx"
+    "clean": "git clean -fdx",
+    "postinstall": "cd sandbox && yarn"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
