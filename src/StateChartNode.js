@@ -482,10 +482,13 @@ export const StateChartNode = props => {
 
           if (typeof delay === 'string') {
             const delayExpr = stateNode.machine.options.delays[delay]
+
             delay =
               typeof delayExpr === 'number'
                 ? delayExpr
-                : delayExpr(current.context, current.event)
+                : typeof delayExpr === 'function'
+                ? delayExpr(current.context, current.event)
+                : false
           }
 
           const isTransient = ownEvent === ''
