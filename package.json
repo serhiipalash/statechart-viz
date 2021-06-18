@@ -1,6 +1,6 @@
 {
   "name": "statechart-viz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React component for statechart visualisation.",
   "private": false,
   "author": {
