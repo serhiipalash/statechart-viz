@@ -1,6 +1,6 @@
 {
   "name": "statechart-viz",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A React component for statechart visualisation.",
   "private": false,
   "author": {
@@ -36,11 +36,10 @@
     "url": "http://github.com/serhiipalash/statechart-viz/issues"
   },
   "scripts": {
-    "dev:server": "cd sandbox && npm start",
+    "dev": "cd sandbox && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "clean": "git clean -fdx",
-    "postinstall": "cd sandbox && yarn"
+    "clean": "git clean -fdx"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
